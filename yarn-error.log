@@ -1,0 +1,60 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js
+
+PATH: 
+  /Library/Frameworks/Python.framework/Versions/3.6/bin:/usr/local/mysql/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/usuario/Library/Android/sdk/tools:/Users/usuario/Library/Android/sdk/platform-tools
+
+Yarn version: 
+  1.5.1
+
+Node version: 
+  6.11.3
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  {
+    "name": "quote-generator",
+    "version": "1.0.0",
+    "description": "A simple quote generator implemented in React",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/manuel188/quote-generator.git"
+    },
+    "author": "Manuel M. Aguilera",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/manuel188/quote-generator/issues"
+    },
+    "homepage": "https://github.com/manuel188/quote-generator#readme",
+    "dependencies": {
+      "babel-core": "^6.26.0",
+      "babel-loader": "^7.1.4"
+    },
+    "devDependencies": {
+      "webpack": "^4.4.1",
+      "webpack-cli": "^2.0.13"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: Found incompatible module
+      at MessageError.Error (native)
+      at new MessageError (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:186:110)
+      at checkOne (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:62444:11)
+      at Object.check (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:62463:5)
+      at /usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:22803:73
+      at next (native)
+      at step (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:98:30)
+      at /usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:109:13
