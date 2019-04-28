@@ -1,20 +1,7 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
 import QuoteRender from './QuoteRender.jsx';
-
-
-/**
- * TODO
- * 1. Component must show a quote at first render
- * 2. Component must show a new random quote everytime the user press the button 
- * 3. Component must show a button for share on facebook and twitter
- */
-
-/*
-    This class connects to the Quote API, get the response and passes to 
-    the QuoteRender component
-*/
-
+import Quotes from '../quotes';
 
 class QuoteContainer extends Component {
 
@@ -22,24 +9,15 @@ class QuoteContainer extends Component {
         super();
         this.state = {
             author: '',
-            quote: ''
+            quote: '',
+            counter: 0
         }
+        console.log(Quotes);
     }
 
     getQuote() {
-        const apiURL = "https://andruxnet-random-famous-quotes.p.mashape.com/?cat=famous&count=1";
-        const apiKey = "wGqyzlzUYdmshw2jiMjnX6cE0hn1p1xKVKIjsnTalUISAv9FQu";
-
-        const config = { 
-            headers: {'X-Mashape-Key': apiKey}
-        }
-        
-        Axios.get(apiURL, config)
-            .then(({data}) => {
-                const {author, quote} = data;
-                this.setState({author, quote});
-            }).catch(data => console.log(data));   
-
+        const quote = Quotes[this.state.counter];
+        this.setState({quote: quote.quote, author: quote.author, counter: this.state.counter + 1});
     }
 
     getColorForQuote() {

@@ -21,6 +21,7 @@
 }
 
 .quote__author {
+    text-align: right
 
 }
 
@@ -33,9 +34,18 @@
     border: none;
 }
 
+.quote__button:focus {
+    outline: none;
+}
+
 .quote__button:hover {
     cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.50);
+
+
 }
+
+
 
 .quote__button-get {
     padding: 15px 30px;

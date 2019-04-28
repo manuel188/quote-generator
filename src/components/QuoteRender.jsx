@@ -1,5 +1,5 @@
 import React from 'react';
-import './QuoteComponent.css';
+import './QuoteRender.css';
 
 const QuoteRender = ({colorQuote, author, quote, getQuote}) => {
     return (
